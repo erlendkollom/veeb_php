@@ -1,0 +1,6 @@
+<application>
+  <component name="Git.Application.Settings">
+    <option name="myPathToGit" value="O:\anna jaoks\PHP\PortableGit\bin\git.exe git.exe" />
+    <option name="SSH_EXECUTABLE" value="IDEA_SSH" />
+  </component>
+</application>
