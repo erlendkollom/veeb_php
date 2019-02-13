@@ -7,3 +7,10 @@
  */
 echo "Hello world!<br>";
 echo "Hello world!";
+
+echo '<hr>';
+
+print "Hello World!<br>";
+print "Hello World!<br>";
+print "Hello World!<br>";
+print "Hello World!<br>";
