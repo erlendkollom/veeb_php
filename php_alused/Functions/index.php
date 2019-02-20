@@ -1,8 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erlend.kollom
- * Date: 19.02.2019
- * Time: 8:41
- */
+// defineeririme funktioosni nimega paarsuseKontroll
+function paarsuseKontroll($arv){
+    if ($arv % 2 == 0) {
+        echo $arv . ' on paaris <br>';
+    } else {
+        echo $arv.' on paaritu <br>';
+        }
 
+}
+
+// kutsume funktsiooni tööle
+paarsuseKontroll(7);
