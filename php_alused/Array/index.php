@@ -31,6 +31,16 @@ $raamatNeli = array(
 )
 );
 
+function vordleHinda ($raamat1, $raamat2){
+    if($raamat1['hind'] == $raamat2['hind']) {
+        return 0;
+    }  else if ($raamat1['hind'] > $raamat2['hind']) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
+
 function tabeliPais($andmed){
     echo '<thead>';
     echo '<tr>';
@@ -57,7 +67,12 @@ function tabel($andmed){
     echo '</tbody>';
     echo '</table>';
 }
+
+usort($raamatud, 'vordleHinda');
+
 tabel($raamatud);
+
+
 
 
 
