@@ -28,6 +28,12 @@ $porsad['george'] = $george;
 $porsad['peppa']['lemmik varv'] = 'punane';
 $porsad['george']['lemmik varv'] = 'sinine';
 foreach ($porsad as $porsaseNimi=>$porsaseAndmed){
+    if ($porsaseAndmed ['sugu'] == 'naine'){
+        echo '<p style ="color: red">';
+
+    } else {
+        echo '<p style ="color: blue">';
+    }
     echo '<b>'.$porsaseNimi.'</b><br>';
     echo '<ul>';
     foreach ($porsaseAndmed as $nimetus=>$vaartus){
