@@ -1,13 +1,17 @@
 <?php
 
-extract($_GET);
+$pi = 3.14;
 
-//$nimi = $_GET['nimi'];
-//$parool = $_GET['parool'];
+$arv = 4;
 
-if (strlen($nimi) == 0 or strlen($parool) == 0 ){
-    header('Location: index.html');
-} else {
-    echo 'Tere '.$nimi.'!<br>';
-    echo 'Sinu parooliks on '.$parool;
-}
+echo "Kera ruumala on ".$pi * $_GET * $arv.'!<br>';
+
+
+//foreach ($_GET as $nimetus => $vaartus){
+//    if (strlen($_GET[$nimetus]) == 0 ){
+//        header('Location: index.html');
+//        exit;
+//    };
+
+
+
