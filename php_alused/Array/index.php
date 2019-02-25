@@ -68,10 +68,19 @@ function tabel($andmed){
     echo '</table>';
 }
 
+function filtreeriHinnaJargi($andmed, $algHind, $loppHind){
+    $filtreerimiseTulemus = array();
+    foreach ($andmed as $element){
+        if($element['hind'] >= $algHind and $element['hind'] <= $loppHind ){
+            $filtreerimiseTulemus[] = $element;
+        }
+    }
+    return $filtreerimiseTulemus;
+}
+
 usort($raamatud, 'vordleHinda');
 
-tabel($raamatud);
-
+tabel(filtreeriHinnaJargi($raamatud, 0, 15));
 
 
 
