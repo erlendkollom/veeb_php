@@ -1,43 +1,60 @@
 <?php
-$peppa = array(
-    'nimi' => 'Peppa',
-    'sugu' => 'naine',
-    'vanus' => 4,
-    'pikkus' => 1.04
-);
-$george = array(
-    'nimi' => 'George',
-    'sugu' => 'mees',
-    'vanus' => 2,
-    'pikkus' => 0.95
-);
-foreach ($peppa as $nimi=>$vaartus){
-    echo $nimi.' - '.$vaartus.'<br>';
-}
-echo '<hr>';
-foreach ($george as $nimi=>$vaartus){
-    echo $nimi.' - '.$vaartus.'<br>';
-}
-echo '<hr>';
-echo $peppa['nimi'].' on '.$peppa['vanus'].' aastat vana<br>';
-echo $george['nimi'].' on '.$george['vanus'].' aastat vana<br>';
-echo '<hr>';
-$porsad = array();
-$porsad['peppa'] = $peppa;
-$porsad['george'] = $george;
-$porsad['peppa']['lemmik varv'] = 'punane';
-$porsad['george']['lemmik varv'] = 'sinine';
-foreach ($porsad as $porsaseNimi=>$porsaseAndmed){
-    if ($porsaseAndmed ['sugu'] == 'naine'){
-        echo '<p style ="color: red">';
 
-    } else {
-        echo '<p style ="color: blue">';
+
+
+$raamatUks = array(
+    'pealkiri' => 'Kui paanikahoog ründab',
+    'hind' => 18.90,
+    'keel' => 'eesti',
+    'autor' => 'Aine Tubridy'
+);
+
+$raamatKaks = array(
+    'pealkiri' => 'Eesti side ja interneti 100 aastat',
+    'hind' => 15.00,
+    'keel' => 'eesti',
+    'autor' => 'Jaak Ulman'
+);
+
+$raamatKolm = array(
+    'pealkiri' => 'Toskaana aastat',
+    'hind' => 26.95,
+    'keel' => 'eesti',
+    'autor' => 'Elizabeth Romer'
+);
+
+$raamatNeli = array(
+    'pealkiri' => 'Jänku-Jassi kingitus',
+    'hind' => 7.95,
+    'keel' => 'eesti',
+    'autor' => 'Julia Sigarova'
+);
+
+$raamatud = array();
+$raamatud['Esimene raamat'] = $raamatUks;
+$raamatud['Teine raamat'] = $raamatKaks;
+$raamatud['Kolmas raamat'] = $raamatKolm;
+$raamatud['Neljas raamat'] = $raamatNeli;
+
+
+echo '<hr>';
+
+
+
+foreach ($raamatud as $raamatuPealkiri=>$raamatuAndmed){
+    if($raamatuAndmed['hind'] <= 15 ){
+        echo '<p style="color: darkorange">';
+}   else {
+        echo '<p style="color: deepskyblue">';
     }
-    echo '<b>'.$porsaseNimi.'</b><br>';
+    echo '<b>'.$raamatuPealkiri.'</b><br>';
     echo '<ul>';
-    foreach ($porsaseAndmed as $nimetus=>$vaartus){
+    foreach ($raamatuAndmed as $nimetus=>$vaartus){
         echo '<li>'.$nimetus.' - '.$vaartus.'</li>';
     }
     echo '</ul>';
 }
+
+
+
+
