@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f442ae0b-5b60-428d-9cda-cab50ec87a93" name="ikt" url="http://kollomerlend.ikt.khk.ee">
+        <fileTransfer host="kollomerlend.ikt.khk.ee" port="22" rootFolder="/home/kollomerlendiktk" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
