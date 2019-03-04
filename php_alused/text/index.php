@@ -1,7 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: erlend.kollom
- * Date: 04.03.2019
- * Time: 9:44
- */
+
+
+
+$tekst = 'Life Is About Ignorig The Drama.';
+
+echo strtolower($tekst);
+
+echo '<br>';
+
+echo strtoupper($tekst);
+
+echo  '<br>';
+
+echo ucfirst(strtolower($tekst));
+
+echo '<br>';
+
+echo ucwords(strtolower($tekst));
