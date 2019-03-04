@@ -2,18 +2,9 @@
 
 
 
-$tekst = 'Life Is About Ignorig The Drama.';
+$tekst = "               Stop making drama, you're not Shakespeare           ";
 
-echo strtolower($tekst);
-
-echo '<br>';
-
-echo strtoupper($tekst);
-
-echo  '<br>';
-
-echo ucfirst(strtolower($tekst));
-
-echo '<br>';
-
-echo ucwords(strtolower($tekst));
+echo "<pre>$tekst</pre>";
+echo "<pre>".trim($tekst)."</pre>";
+echo "<pre>".ltrim($tekst)."</pre>";
+echo "<pre>".rtrim($tekst)."</pre>";
