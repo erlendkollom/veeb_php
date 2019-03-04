@@ -1,27 +1,15 @@
 <?php
 
-$eesti_kuud = array(
-  2=> 'jaanuar', 'veebruar', 'märts', 'aprill', 'mai', 'juuni', 'juuli', 'august', 'september', 'oktoober', 'november', 'detsember'
-);
+$metshein = mktime(0,0,0,06,11,1980);
+$mina = mktime(0,0,0,06,20,1997);
 
-$eesti_paevad = array(
-    1=>'esmaspäev',
-        'teisipäev',
-        'kolmapäev',
-        'neljapäev',
-        'reede',
-        'laupäev',
-        'pühapäev'
-);
-$paevSonaga = $eesti_paevad[date('n')];
-$paevNumbriga =date('d');
-$aasta = date('Y');
-$kuu = $eesti_kuud[date('n')];
 
-$now = time(); // praegune kellaaeg
-//jaanipäev
-$your_date = strtotime("2019-06-24");
-//arvutan välja ajavahe
-$datediff = $your_date - $now;
-//ümardan arvu päevadeni
-echo round($datediff / (60 * 60 * 24));
+
+echo "Metsheina sünnipäev on ".date('d.m.Y', $metshein).'<br>';
+echo "Minu sünnipäev on ".date('d.m.Y', $mina).'<br>';
+
+$vanusevahe = $mina - $metshein;
+
+$vahe = round($vanusevahe / (60 * 60 *24 * 364));
+
+echo "Metshein on minust $vahe aastat vanem";
