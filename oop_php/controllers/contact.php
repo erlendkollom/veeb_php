@@ -1,2 +1,2 @@
 <?php
-$mainContent->set('content', 'Main page Contact');
+$mainContent->set('content', 'Contact via erlend.kollom@khk.ee');

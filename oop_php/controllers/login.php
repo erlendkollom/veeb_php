@@ -1,3 +1,4 @@
+
 <?php
 $login = new Template('login');
 $login->set('username', 'User');
