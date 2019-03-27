@@ -13,7 +13,42 @@ $main->set('js', $js->parse());
 // set up main page real values
 $main->set('lang', $http->get('lang_id'));
 $main->set('title', 'App Example Title');
+
 $mainContent = new Template('main_content');
+$dishType = new Template('type');
+
+//Ehitame dish_type valiku
+$sql = 'SELECT * FROM dish_types';
+$dishTypes =  $db->getData($sql);
+foreach ($dishTypes as $dishTypeData){
+
+    $dishTypeName = new Template('type_name');
+    $dishTypeName->set('type_name', $dishTypeData['type_name']);
+    $dishTypeName->set('type_icon', $dishTypeData['type_icon']);
+    $dishType->set('type_name', $dishTypeName->parse());
+
+
+    $dishData = new  Template('type_data');
+    $dishData->set('type_name', $dishTypeData['type_name']);
+    $dish = new  Template('dish');
+    $sql = 'SELECT * FROM dishes where type_id ='.fixDb($dishTypeData['type_id']);
+    $dishes = $db->getData($sql);
+
+    foreach ($dishes as $dishContent){
+        $dish->set('dish_name', $dishContent['dish_name']);
+        $dish->set('dish_description', $dishContent['dish_description']);
+        $dish->set('dish_price', $dishContent['dish_price']);
+        $dishData->add('dishes', $dish->parse());
+    }
+
+    $dishType->set('type_data', $dishData->parse());
+
+
+    $mainContent->add('menu', $dishType->parse());
+}
+
+
+
 $mainContent->set('header', 'Page Header');
 // page content from controller
 // add action control
